@@ -1,0 +1,33 @@
+{
+  "extends": ["airbnb", "plugin:import/errors", "plugin:import/warnings"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src"]
+      }
+    }
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "semi": 0,
+    "no-undef": 1,
+    "react/prop-types": 1,
+    "arrow-parens": "off",
+    "object-curly-newline": "off",
+    "no-var": 1,
+    "allow-import-export-everywhere": true,
+    "react/jsx-filename-extension": [0],
+    "no-underscore-dangle": ["error", {
+      "allow": ["_id"]
+    }]
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "window": true,
+    "document": true
+  }
+}
